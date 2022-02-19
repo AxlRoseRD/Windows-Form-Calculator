@@ -30,7 +30,6 @@ namespace Calculator
                 textBox1.Text = "";
             
             textBox1.Text += boton.Text;
-
         }
 
         private void addoperation(object sender, EventArgs e)
@@ -72,6 +71,25 @@ namespace Calculator
             valor2 = 0;
         }
 
+        private void delete(object sender, EventArgs e) 
+        {
+            if(textBox1.Text.Length > 1) 
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+            }
+            else
+            {
+                textBox1.Text = "0";
+            }
+        }
+
+        private void clearAll(object sender, EventArgs e) 
+        {
+            textBox1.Text = "0";
+            valor1 = 0;
+            valor2 = 0;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -82,21 +100,5 @@ namespace Calculator
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
